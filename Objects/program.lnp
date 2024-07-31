@@ -1,0 +1,25 @@
+--cpu Cortex-M1
+".\objects\1636rr52.o"
+".\objects\init.o"
+".\objects\interruptions.o"
+".\objects\main.o"
+".\objects\mdr1986ve1t_it.o"
+".\objects\save_flash.o"
+".\objects\eth_can.o"
+".\objects\startup_mdr1986ve1t.o"
+".\objects\system_mdr1986ve1t.o"
+".\objects\mdr32f9qx_can.o"
+".\objects\mdr32f9qx_dma.o"
+".\objects\mdr32f9qx_eeprom.o"
+".\objects\mdr32f9qx_eeprom_cache.o"
+".\objects\mdr32f9qx_eth.o"
+".\objects\mdr32f9qx_iwdg.o"
+".\objects\mdr32f9qx_port.o"
+".\objects\mdr32f9qx_power.o"
+".\objects\mdr32f9qx_rst_clk.o"
+".\objects\mdr32f9qx_ssp.o"
+".\objects\mdr32f9qx_timer.o"
+--strict --scatter ".\Objects\program.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\program.map" -o .\Objects\program.axf

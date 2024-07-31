@@ -1,0 +1,121 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         #line   1                "C:\\Keil_v5\\ARM\\PACK\\Keil\\
+MDR1986BExx\\2.0.3\\Libraries\\SPL\\MDR32Fx\\src\\MDR32F9Qx_eeprom_cache.S"
+    1 00000000         ;
+    2 00000000         
+    3 00000000         
+    4 00000000         
+    5 00000000         
+    6 00000000         
+    7 00000000         
+    8 00000000         
+    9 00000000         
+   10 00000000         
+   11 00000000         
+   12 00000000         
+   13 00000000         
+   14 00000000         
+   15 00000000         
+   16 00000000         
+   17 00000000         
+   18 00000000         
+   19 00000000         
+   20 00000000         
+   21 00000000         
+   22 00000000         
+   23 00000000         
+   24 00000000         
+   25 00000000         
+   26 00000000         #line   37               "C:\\Keil_v5\\ARM\\PACK\\Keil\\
+MDR1986BExx\\2.0.3\\Libraries\\SPL\\MDR32Fx\\src\\MDR32F9Qx_eeprom_cache.S"
+   37 00000000         
+   38 00000000                 AREA             |EXECUTABLE_MEMORY_SECTION|, CO
+DE, READONLY, ALIGN=2
+   39 00000000         
+   40 00000000                 THUMB
+   41 00000000         
+   42 00000000         ;
+   43 00000000         
+   44 00000000         
+   45 00000000         
+   46 00000000         
+   47 00000000         
+   48 00000000         
+   49 00000000         
+   50 00000000         EEPROM_UpdateDCacheAsm
+                               PROC
+   51 00000000                 EXPORT           EEPROM_UpdateDCacheAsm
+   52 00000000         
+   53 00000000 2050            MOVS             r0,#0x50    ; r0 = 0x00000050
+   54 00000002 BF00            NOP                          ; Align next LDR in
+                                                            struction
+   55 00000004         ReadFlash
+   56 00000004 6801            LDR              r1,[r0,#0x00] ; Read EEPROM
+   57 00000006 3810            SUBS             r0,r0,#0x10 ; r0 -= 0x10
+   58 00000008         
+   59 00000008 2800            CMP              r0,#0x00
+   60 0000000A D1FB            BNE              ReadFlash
+   61 0000000C         
+   62 0000000C 4770            BX               LR
+   63 0000000E         
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   64 0000000E                 ENDP
+   65 0000000E         
+   66 0000000E                 END
+Command Line: --debug --xref --cpreproc --diag_suppress=9931 --cpu=Cortex-M1 --
+apcs=interwork --depend=.\objects\mdr32f9qx_eeprom_cache.d -o.\objects\mdr32f9q
+x_eeprom_cache.o -I.\h-files -I.\RTE\Device\MDR1986BE1T -I.\RTE\_Target_1 -IC:\
+Keil_v5\ARM\PACK\Keil\MDR1986BExx\2.0.3\Libraries\CMSIS\MDR32Fx\CoreSupport\CM1
+ -IC:\Keil_v5\ARM\PACK\Keil\MDR1986BExx\2.0.3\Libraries\CMSIS\MDR32Fx\DeviceSup
+port\MDR1986VE1T\inc -IC:\Keil_v5\ARM\PACK\Keil\MDR1986BExx\2.0.3\Libraries\SPL
+\MDR32Fx\inc -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__UVISION_VERSION SETA
+ 526" --predefine="_RTE_ SETA 1" --list=.\listings\mdr32f9qx_eeprom_cache.lst C
+:\Keil_v5\ARM\PACK\Keil\MDR1986BExx\2.0.3\Libraries\SPL\MDR32Fx\src\MDR32F9Qx_e
+eprom_cache.S
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+EEPROM_UpdateDCacheAsm 00000000
+
+Symbol: EEPROM_UpdateDCacheAsm
+   Definitions
+      At line 50 in file C:\\Keil_v5\\ARM\\PACK\\Keil\\MDR1986BExx\\2.0.3\\Libr
+aries\\SPL\\MDR32Fx\\src\\MDR32F9Qx_eeprom_cache.S
+   Uses
+      At line 51 in file C:\\Keil_v5\\ARM\\PACK\\Keil\\MDR1986BExx\\2.0.3\\Libr
+aries\\SPL\\MDR32Fx\\src\\MDR32F9Qx_eeprom_cache.S
+Comment: EEPROM_UpdateDCacheAsm used once
+EXECUTABLE_MEMORY_SECTION 00000000
+
+Symbol: EXECUTABLE_MEMORY_SECTION
+   Definitions
+      At line 38 in file C:\\Keil_v5\\ARM\\PACK\\Keil\\MDR1986BExx\\2.0.3\\Libr
+aries\\SPL\\MDR32Fx\\src\\MDR32F9Qx_eeprom_cache.S
+   Uses
+      None
+Comment: EXECUTABLE_MEMORY_SECTION unused
+ReadFlash 00000004
+
+Symbol: ReadFlash
+   Definitions
+      At line 55 in file C:\\Keil_v5\\ARM\\PACK\\Keil\\MDR1986BExx\\2.0.3\\Libr
+aries\\SPL\\MDR32Fx\\src\\MDR32F9Qx_eeprom_cache.S
+   Uses
+      At line 60 in file C:\\Keil_v5\\ARM\\PACK\\Keil\\MDR1986BExx\\2.0.3\\Libr
+aries\\SPL\\MDR32Fx\\src\\MDR32F9Qx_eeprom_cache.S
+Comment: ReadFlash used once
+3 symbols
+335 symbols in table
